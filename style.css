@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+[class^="item-"] {
+  display: grid;
+  place-items: center;
+}
+
+.contain {
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "B B B B    A A A A    A A A A"
+    "B B B B    D D D D    D D D D"
+    "B B B B    C C C C    C C C C";
+}
+
+.item-1 {
+  grid-area: A;
+  height: 10vh;
+  display: flex;
+  gap: 20px;
+  place-content: center center;
+  justify-content: space-evenly;
+  width: 55vw;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.item-2 {
+  grid-area: B;
+  width: 45vw;
+  background-image: url("keyboard.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.item-3 {
+  grid-area: C;
+  height: 60vh;
+  width: 55vw;
+  display: flex;
+  padding: 20%;
+}
+.item-4 {
+  grid-area: D;
+  height: 30vh;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 55vw;
+}
+h1 {
+  font-size: 75px;
+  margin-top: 100px;
+  letter-spacing: 1px;
+}
+p {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+@media screen and (max-width: 1100px) {
+  .contain {
+    display: grid;
+    width: 100vw;
+    gap: 1px;
+    grid-template-areas:
+      "A A A A    A A A A"
+      "D D D D    D D D D"
+      "C C C C    C C C C"
+      "B B B B    B B B B"
+      "B B B B    B B B B";
+  }
+
+  .item-1 {
+    grid-area: A;
+    height: 10vh;
+    display: flex;
+    gap: 20px;
+    place-content: center center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .item-2 {
+    grid-area: B;
+    height: 60vh;
+    width: 100%;
+  }
+  .item-3 {
+    grid-area: C;
+    height: 60vh;
+    width: 100%;
+  }
+  .item-4 {
+    grid-area: D;
+    height: 30vh;
+    place-content: center center;
+    width: 100%;
+  }
+  h1 {
+    font-size: 75px;
+    margin-top: 100px;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 22px;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+}
